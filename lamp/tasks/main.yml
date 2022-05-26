@@ -10,7 +10,7 @@
 
 - name: Open the firewall rules
   firewalld:
-    service: http
+    service: http, https
     permanent: yes
     state: enabled
   notify: 
