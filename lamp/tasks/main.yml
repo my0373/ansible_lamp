@@ -7,12 +7,14 @@
   service:
     name: httpd 
     state: started
-    
-- name: Open port 80 for http access
-  service: httpd
-    permanent: true
+
+- name: Open the firewall rules
+  firewalld:
+    service: http
+    permanent: yes
     state: enabled
-    notify: 
-      - restart httpd
-      - restart firewalld
+  notify: 
+    - restart httpd
+    - restart firewalld
+    
 
