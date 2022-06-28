@@ -11,7 +11,7 @@
 # Example from Ansible Playbooks
 - template:
     src: /index.html
-    dest: /var/www/http/index.html
+    dest: /var/www/html/index.html
     owner: root
     group: wheel
     mode: 0644
@@ -19,7 +19,7 @@
 # Example from Ansible Playbooks
 - template:
     src: /index.html
-    dest: /var/www/http/dashboard.js
+    dest: /var/www/html/dashboard.js
     owner: root
     group: wheel
     mode: 0644
