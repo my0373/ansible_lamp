@@ -8,6 +8,22 @@
     name: httpd 
     state: started
 
+# Example from Ansible Playbooks
+- template:
+    src: /index.html
+    dest: /var/www/http/index.html
+    owner: root
+    group: wheel
+    mode: 0644
+
+# Example from Ansible Playbooks
+- template:
+    src: /index.html
+    dest: /var/www/http/dashboard.js
+    owner: root
+    group: wheel
+    mode: 0644
+
 # - name: ensure firewalld has stopped
 #   service:
 #     name: firewalld 
