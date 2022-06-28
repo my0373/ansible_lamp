@@ -8,10 +8,10 @@
     name: httpd 
     state: started
 
-- name: ensure firewalld has stopped
-  service:
-    name: firewalld 
-    state: stopped
+# - name: ensure firewalld has stopped
+#   service:
+#     name: firewalld 
+#     state: stopped
 
 # - name: Open the firewall rules (http)
 #   firewalld:
