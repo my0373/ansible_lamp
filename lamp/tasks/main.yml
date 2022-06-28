@@ -8,22 +8,27 @@
     name: httpd 
     state: started
 
-- name: Open the firewall rules (http)
-  firewalld:
-    service: http
-    permanent: yes
-    state: enabled
-  notify: 
-    - restart httpd
-    - restart firewalld
+- name: ensure firewalld has stopped
+  service:
+    name: firewalld 
+    state: stopped
 
-- name: Open the firewall rules (https)
-  firewalld:
-    service: https
-    permanent: yes
-    state: enabled
-  notify: 
-    - restart httpd
-    - restart firewalld
+# - name: Open the firewall rules (http)
+#   firewalld:
+#     service: http
+#     permanent: yes
+#     state: enabled
+#   notify: 
+#     - restart httpd
+#     - restart firewalld
+
+# - name: Open the firewall rules (https)
+#   firewalld:
+#     service: https
+#     permanent: yes
+#     state: enabled
+#   notify: 
+#     - restart httpd
+#     - restart firewalld
     
 
