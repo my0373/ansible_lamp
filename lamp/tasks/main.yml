@@ -10,7 +10,22 @@
 
 # Example from Ansible Playbooks
 - template:
-    src: blog
+    src: blog/blog.css
+    dest: /var/www/html/
+    owner: root
+    group: wheel
+    mode: 0644
+
+- template:
+    src: blog/blog.rtl.css
+    dest: /var/www/html/
+    owner: root
+    group: wheel
+    mode: 0644
+
+
+- template:
+    src: blog/index.html
     dest: /var/www/html/
     owner: root
     group: wheel
