@@ -10,7 +10,7 @@
 
 # Example from Ansible Playbooks
 - template:
-    src: /index.html
+    src: index.html
     dest: /var/www/html/index.html
     owner: root
     group: wheel
@@ -18,7 +18,7 @@
 
 # Example from Ansible Playbooks
 - template:
-    src: /index.html
+    src: dashboard.js
     dest: /var/www/html/dashboard.js
     owner: root
     group: wheel
